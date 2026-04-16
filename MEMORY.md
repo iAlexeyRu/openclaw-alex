@@ -16,5 +16,5 @@
 - Из `.openclaw/` сейчас стоит хранить в git только `.openclaw/workspace-state.json`, остальное обычно не нужно.
 - Из старого репозитория OpenClawMinimax стоит забирать только очищенные skill'ы, безопасные инфраструктурные заметки и distilled memory, но не сырые секреты, токены и runtime-мусор.
 - На 2026-04-16 уже перенесены: `proxmox-home`, `vps-tw01`, `openwrt-home`, `amnezia-install`, `1c-urok`.
-- Для `1c-urok` по прямой просьбе Алекса сохранены логин и пароль в skill workspace.
+- Для `1c-urok` по прямой просьбе Алекса сохранены логин и пароль в skill workspace, это исключение из обычного правила не хранить секреты в репозитории.
 - Не переносить как есть: `sergio-link`, а также memory-файлы с паролями, токенами и app-specific credentials.
