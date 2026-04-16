@@ -1,1 +1,2 @@
-.openclaw/
+.openclaw/*
+!.openclaw/workspace-state.json
