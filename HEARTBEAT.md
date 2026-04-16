@@ -1,7 +1,5 @@
-# HEARTBEAT.md Template
+# Heartbeat checklist
 
-```markdown
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
-
-# Add tasks below when you want the agent to check something periodically.
-```
+- Периодически проверять, нет ли важных вещей, о которых стоит напомнить Алексу.
+- Если есть явный активный проект, по возможности двигать его вперёд молча, а не просто мониторить.
+- Не шуметь без повода, особенно если нет изменений.
