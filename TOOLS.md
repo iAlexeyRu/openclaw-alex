@@ -11,6 +11,14 @@
 
 - Primary communication channel for now: Telegram
 
+## Lightpanda
+
+- Local installer: `scripts/install_lightpanda.sh`
+- Local benchmark wrapper for 1C:Урок: `scripts/benchmark_1c_urok.sh`
+- Local binary path after install: `tools/lightpanda/lightpanda`
+- Version marker: `tools/lightpanda/VERSION`
+- The binary itself is intentionally ignored in git to avoid dragging a 100MB+ vendor file into the repo.
+
 ## Notes
 
 - This repository is intended to store the real ongoing workspace, not just bootstrap files.
