@@ -3,8 +3,9 @@
 ## Git
 
 - Main repo: `git@github.com:iAlexeyRu/openclaw-alex.git`
-- SSH key label/comment: `vi@openclaw.local`
-- SSH private key path on this host: `/home/debian/.ssh/openclaw_vi_ed25519`
+- GitHub SSH key for this host: `~/.ssh/id_ed25519_openclaw_github`
+- Public key comment: `alice@openclaw github access`
+- Current public key path: `~/.ssh/id_ed25519_openclaw_github.pub`
 
 ## Messaging
 
