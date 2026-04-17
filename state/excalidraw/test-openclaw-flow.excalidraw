@@ -1,0 +1,99 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "openclaw-alice",
+  "elements": [
+    {
+      "type": "text",
+      "id": "title",
+      "x": 210,
+      "y": 30,
+      "text": "OpenClaw test flow",
+      "fontSize": 28,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "originalText": "OpenClaw test flow",
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "b1",
+      "x": 100,
+      "y": 120,
+      "width": 220,
+      "height": 100,
+      "roundness": { "type": 3 },
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "boundElements": [
+        { "id": "t_b1", "type": "text" },
+        { "id": "a1", "type": "arrow" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_b1",
+      "x": 105,
+      "y": 150,
+      "width": 210,
+      "height": 25,
+      "text": "Алекс просит схему",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "b1",
+      "originalText": "Алекс просит схему",
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "b2",
+      "x": 440,
+      "y": 120,
+      "width": 220,
+      "height": 100,
+      "roundness": { "type": 3 },
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "boundElements": [
+        { "id": "t_b2", "type": "text" },
+        { "id": "a1", "type": "arrow" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_b2",
+      "x": 445,
+      "y": 150,
+      "width": 210,
+      "height": 25,
+      "text": "Алиса шлет линк 😤",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "b2",
+      "originalText": "Алиса шлет линк 😤",
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a1",
+      "x": 320,
+      "y": 170,
+      "width": 120,
+      "height": 0,
+      "points": [[0, 0], [120, 0]],
+      "endArrowhead": "arrow",
+      "startBinding": { "elementId": "b1", "fixedPoint": [1, 0.5] },
+      "endBinding": { "elementId": "b2", "fixedPoint": [0, 0.5] }
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
