@@ -20,6 +20,8 @@
 - Local binary path after install: `tools/lightpanda/lightpanda`
 - Version marker: `tools/lightpanda/VERSION`
 - The binary itself is intentionally ignored in git to avoid dragging a 100MB+ vendor file into the repo.
+- Practical rule from local benchmarks on 2026-04-17: start with `requests` for simple or authenticated HTML fetches, switch to Lightpanda when the page is JS-rendered or raw HTTP gets blocked/useless content.
+- Local examples: `requests` won on speed and memory for 1C:Урок profile, Meduza, GitHub and Steam, but Lightpanda was more useful for the React shopping cart demo and for Championat where plain HTTP only got `403`.
 
 ## Notes
 

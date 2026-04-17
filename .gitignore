@@ -2,4 +2,5 @@
 !.openclaw/workspace-state.json
 imports/
 scripts/__pycache__/
+memory/.dreams/
 tools/lightpanda/lightpanda
