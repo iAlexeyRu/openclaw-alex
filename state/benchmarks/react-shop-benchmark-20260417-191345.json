@@ -1,0 +1,320 @@
+{
+  "generated_at": "2026-04-17T19:13:35Z",
+  "runs": 5,
+  "solutions": {
+    "requests": {
+      "runs": [
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_requests_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "requests",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "status_code": 200,
+            "bytes": 2058,
+            "markers_found": [],
+            "markers_found_count": 0,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 0.306,
+            "cpu_seconds": 0.14,
+            "cpu_percent": 45.824,
+            "max_rss_kb": 33040
+          },
+          "stderr_tail": ""
+        },
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_requests_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "requests",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "status_code": 200,
+            "bytes": 2058,
+            "markers_found": [],
+            "markers_found_count": 0,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 0.306,
+            "cpu_seconds": 0.14,
+            "cpu_percent": 45.75,
+            "max_rss_kb": 33052
+          },
+          "stderr_tail": ""
+        },
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_requests_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "requests",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "status_code": 200,
+            "bytes": 2058,
+            "markers_found": [],
+            "markers_found_count": 0,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 0.286,
+            "cpu_seconds": 0.13,
+            "cpu_percent": 45.518,
+            "max_rss_kb": 33128
+          },
+          "stderr_tail": ""
+        },
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_requests_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "requests",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "status_code": 200,
+            "bytes": 2058,
+            "markers_found": [],
+            "markers_found_count": 0,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 0.286,
+            "cpu_seconds": 0.12,
+            "cpu_percent": 41.975,
+            "max_rss_kb": 33080
+          },
+          "stderr_tail": ""
+        },
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_requests_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "requests",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "status_code": 200,
+            "bytes": 2058,
+            "markers_found": [],
+            "markers_found_count": 0,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 0.285,
+            "cpu_seconds": 0.12,
+            "cpu_percent": 42.054,
+            "max_rss_kb": 32996
+          },
+          "stderr_tail": ""
+        }
+      ],
+      "summary": {
+        "ok_runs": 5,
+        "failed_runs": 0,
+        "elapsed_seconds": {
+          "min": 0.285,
+          "max": 0.306,
+          "mean": 0.294,
+          "median": 0.286
+        },
+        "cpu_seconds": {
+          "min": 0.12,
+          "max": 0.14,
+          "mean": 0.13,
+          "median": 0.13
+        },
+        "cpu_percent": {
+          "min": 41.975,
+          "max": 45.824,
+          "mean": 44.224,
+          "median": 45.518
+        },
+        "max_rss_kb": {
+          "min": 32996,
+          "max": 33128,
+          "mean": 33059.2,
+          "median": 33052
+        }
+      }
+    },
+    "lightpanda": {
+      "runs": [
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_lightpanda_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "lightpanda",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "bytes": 1829,
+            "markers_found": [
+              "16 Product\\(s\\) found",
+              "Cropped Stay Groovy off white",
+              "Add to cart",
+              "Free shipping"
+            ],
+            "markers_found_count": 4,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 1.682,
+            "cpu_seconds": 0.13,
+            "cpu_percent": 7.729,
+            "max_rss_kb": 94936
+          },
+          "stderr_tail": ""
+        },
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_lightpanda_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "lightpanda",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "bytes": 1829,
+            "markers_found": [
+              "16 Product\\(s\\) found",
+              "Cropped Stay Groovy off white",
+              "Add to cart",
+              "Free shipping"
+            ],
+            "markers_found_count": 4,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 1.686,
+            "cpu_seconds": 0.13,
+            "cpu_percent": 7.711,
+            "max_rss_kb": 94956
+          },
+          "stderr_tail": ""
+        },
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_lightpanda_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "lightpanda",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "bytes": 1829,
+            "markers_found": [
+              "16 Product\\(s\\) found",
+              "Cropped Stay Groovy off white",
+              "Add to cart",
+              "Free shipping"
+            ],
+            "markers_found_count": 4,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 1.682,
+            "cpu_seconds": 0.13,
+            "cpu_percent": 7.728,
+            "max_rss_kb": 95156
+          },
+          "stderr_tail": ""
+        },
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_lightpanda_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "lightpanda",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "bytes": 1829,
+            "markers_found": [
+              "16 Product\\(s\\) found",
+              "Cropped Stay Groovy off white",
+              "Add to cart",
+              "Free shipping"
+            ],
+            "markers_found_count": 4,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 1.724,
+            "cpu_seconds": 0.15,
+            "cpu_percent": 8.698,
+            "max_rss_kb": 97664
+          },
+          "stderr_tail": ""
+        },
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/home/alex/.openclaw/workspace/scripts/react_shop_lightpanda_check.py"
+          ],
+          "returncode": 0,
+          "payload": {
+            "solution": "lightpanda",
+            "url": "https://react-shopping-cart-67954.firebaseapp.com/",
+            "bytes": 1829,
+            "markers_found": [
+              "16 Product\\(s\\) found",
+              "Cropped Stay Groovy off white",
+              "Add to cart",
+              "Free shipping"
+            ],
+            "markers_found_count": 4,
+            "markers_total": 4
+          },
+          "metrics": {
+            "elapsed_seconds": 1.682,
+            "cpu_seconds": 0.12,
+            "cpu_percent": 7.136,
+            "max_rss_kb": 94908
+          },
+          "stderr_tail": ""
+        }
+      ],
+      "summary": {
+        "ok_runs": 5,
+        "failed_runs": 0,
+        "elapsed_seconds": {
+          "min": 1.682,
+          "max": 1.724,
+          "mean": 1.691,
+          "median": 1.682
+        },
+        "cpu_seconds": {
+          "min": 0.12,
+          "max": 0.15,
+          "mean": 0.132,
+          "median": 0.13
+        },
+        "cpu_percent": {
+          "min": 7.136,
+          "max": 8.698,
+          "mean": 7.8,
+          "median": 7.728
+        },
+        "max_rss_kb": {
+          "min": 94908,
+          "max": 97664,
+          "mean": 95524,
+          "median": 94956
+        }
+      }
+    }
+  }
+}
