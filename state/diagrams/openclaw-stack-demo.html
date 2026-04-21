@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw Demo Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: #020617;
+      min-height: 100vh;
+      padding: 2rem;
+      color: white;
+    }
+    .container { max-width: 1240px; margin: 0 auto; }
+    .header { margin-bottom: 2rem; }
+    .header-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+    .pulse-dot { width: 12px; height: 12px; background: #22d3ee; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.45;} }
+    h1 { font-size: 1.55rem; font-weight: 700; letter-spacing: -0.02em; }
+    .subtitle { color: #94a3b8; font-size: 0.92rem; margin-left: 1.75rem; }
+    .diagram-container, .card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid #1e293b;
+      border-radius: 1rem;
+    }
+    .diagram-container { padding: 1.25rem; overflow-x: auto; }
+    svg { width: 100%; min-width: 1080px; display: block; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .card { padding: 1.15rem; }
+    .card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem; }
+    .card-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .card-dot.cyan { background: #22d3ee; }
+    .card-dot.emerald { background: #34d399; }
+    .card-dot.amber { background: #fbbf24; }
+    .card h3 { font-size: 0.88rem; }
+    .card ul { list-style: none; color: #94a3b8; font-size: 0.77rem; }
+    .card li { margin-bottom: 0.4rem; }
+    .footer { text-align: center; margin-top: 1rem; color: #475569; font-size: 0.74rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-row">
+        <div class="pulse-dot"></div>
+        <h1>OpenClaw Demo Architecture</h1>
+      </div>
+      <p class="subtitle">Алекс пишет в Telegram, Алиса внутри OpenClaw работает с навыками, git и веб-инструментами.</p>
+    </div>
+
+    <div class="diagram-container">
+      <svg viewBox="0 0 1140 760" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <rect x="170" y="50" width="930" height="620" rx="14" fill="rgba(251, 191, 36, 0.04)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="185" y="72" fill="#fbbf24" font-size="10" font-weight="600">Local host / workspace boundary</text>
+
+        <rect x="245" y="105" width="700" height="420" rx="12" fill="rgba(251, 146, 60, 0.05)" stroke="#fb923c" stroke-width="1" stroke-dasharray="5,5"/>
+        <text x="260" y="126" fill="#fb923c" font-size="10" font-weight="600">OpenClaw runtime</text>
+
+        <line x1="115" y1="235" x2="243" y2="235" stroke="#22d3ee" stroke-width="1.7" marker-end="url(#arrowhead)"/>
+        <text x="178" y="225" fill="#94a3b8" font-size="9" text-anchor="middle">messages</text>
+
+        <line x1="945" y1="225" x2="1020" y2="225" stroke="#34d399" stroke-width="1.7" marker-end="url(#arrowhead)"/>
+        <text x="980" y="214" fill="#94a3b8" font-size="9" text-anchor="middle">git push</text>
+
+        <line x1="945" y1="320" x2="1020" y2="320" stroke="#fbbf24" stroke-width="1.7" marker-end="url(#arrowhead)"/>
+        <text x="980" y="309" fill="#94a3b8" font-size="9" text-anchor="middle">http / fetch</text>
+
+        <line x1="520" y1="445" x2="520" y2="555" stroke="#a78bfa" stroke-width="1.7" marker-end="url(#arrowhead)"/>
+        <text x="535" y="505" fill="#94a3b8" font-size="9">skills + files</text>
+
+        <line x1="670" y1="445" x2="670" y2="555" stroke="#a78bfa" stroke-width="1.7" marker-end="url(#arrowhead)"/>
+        <text x="685" y="505" fill="#94a3b8" font-size="9">benchmarks</text>
+
+        <line x1="355" y1="320" x2="395" y2="320" stroke="#34d399" stroke-width="1.7" marker-end="url(#arrowhead)"/>
+        <line x1="545" y1="320" x2="585" y2="320" stroke="#34d399" stroke-width="1.7" marker-end="url(#arrowhead)"/>
+        <line x1="735" y1="320" x2="775" y2="320" stroke="#34d399" stroke-width="1.7" marker-end="url(#arrowhead)"/>
+        <text x="570" y="307" fill="#94a3b8" font-size="9" text-anchor="middle">tool calls</text>
+
+        <rect x="25" y="205" width="90" height="60" rx="6" fill="rgba(30, 41, 59, 0.55)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="70" y="230" fill="white" font-size="11" font-weight="600" text-anchor="middle">Алекс</text>
+        <text x="70" y="246" fill="#94a3b8" font-size="9" text-anchor="middle">Telegram</text>
+
+        <rect x="245" y="195" width="110" height="80" rx="8" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="300" y="223" fill="white" font-size="11" font-weight="600" text-anchor="middle">Ingress</text>
+        <text x="300" y="239" fill="#94a3b8" font-size="9" text-anchor="middle">Telegram</text>
+        <text x="300" y="255" fill="#94a3b8" font-size="9" text-anchor="middle">message routing</text>
+
+        <rect x="395" y="175" width="150" height="110" rx="8" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="470" y="207" fill="white" font-size="12" font-weight="600" text-anchor="middle">Алиса</text>
+        <text x="470" y="227" fill="#94a3b8" font-size="9" text-anchor="middle">main agent</text>
+        <text x="470" y="243" fill="#94a3b8" font-size="9" text-anchor="middle">reasoning + memory</text>
+        <text x="470" y="259" fill="#34d399" font-size="8" text-anchor="middle">OpenClaw workspace brain</text>
+
+        <rect x="585" y="175" width="150" height="110" rx="8" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="660" y="207" fill="white" font-size="12" font-weight="600" text-anchor="middle">Tools</text>
+        <text x="660" y="227" fill="#94a3b8" font-size="9" text-anchor="middle">read / write / exec</text>
+        <text x="660" y="243" fill="#94a3b8" font-size="9" text-anchor="middle">web / sessions</text>
+        <text x="660" y="259" fill="#34d399" font-size="8" text-anchor="middle">action layer</text>
+
+        <rect x="775" y="175" width="170" height="110" rx="8" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="860" y="207" fill="white" font-size="12" font-weight="600" text-anchor="middle">Skills</text>
+        <text x="860" y="227" fill="#94a3b8" font-size="9" text-anchor="middle">excalidraw</text>
+        <text x="860" y="243" fill="#94a3b8" font-size="9" text-anchor="middle">architecture-diagram</text>
+        <text x="860" y="259" fill="#94a3b8" font-size="9" text-anchor="middle">debugging / inspection</text>
+
+        <rect x="1020" y="190" width="90" height="70" rx="6" fill="rgba(30, 41, 59, 0.55)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="1065" y="218" fill="white" font-size="11" font-weight="600" text-anchor="middle">GitHub</text>
+        <text x="1065" y="235" fill="#94a3b8" font-size="9" text-anchor="middle">workspace repo</text>
+
+        <rect x="1020" y="285" width="90" height="70" rx="6" fill="rgba(30, 41, 59, 0.55)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="1065" y="313" fill="white" font-size="11" font-weight="600" text-anchor="middle">Web</text>
+        <text x="1065" y="330" fill="#94a3b8" font-size="9" text-anchor="middle">docs + targets</text>
+
+        <rect x="430" y="555" width="180" height="78" rx="8" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="520" y="585" fill="white" font-size="12" font-weight="600" text-anchor="middle">Workspace files</text>
+        <text x="520" y="603" fill="#94a3b8" font-size="9" text-anchor="middle">skills / memory / state</text>
+        <text x="520" y="619" fill="#94a3b8" font-size="9" text-anchor="middle">tracked in git</text>
+
+        <rect x="620" y="555" width="210" height="78" rx="8" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="725" y="585" fill="white" font-size="12" font-weight="600" text-anchor="middle">Bench / automation</text>
+        <text x="725" y="603" fill="#94a3b8" font-size="9" text-anchor="middle">Lightpanda / scripts</text>
+        <text x="725" y="619" fill="#94a3b8" font-size="9" text-anchor="middle">URL checks / skill helpers</text>
+
+        <text x="895" y="95" fill="white" font-size="10" font-weight="600">Legend</text>
+        <rect x="895" y="108" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="918" y="117" fill="#94a3b8" font-size="8">Ingress / frontend</text>
+        <rect x="895" y="124" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="918" y="133" fill="#94a3b8" font-size="8">Agent / tools</text>
+        <rect x="895" y="140" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="918" y="149" fill="#94a3b8" font-size="8">Skills / workspace</text>
+        <rect x="895" y="156" width="16" height="10" rx="2" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1"/>
+        <text x="918" y="165" fill="#94a3b8" font-size="8">Infra / automation</text>
+      </svg>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-header"><div class="card-dot cyan"></div><h3>Когда ставить architecture-diagram</h3></div>
+        <ul>
+          <li>• Нужно красиво показать сервисы, базы, очереди и внешние интеграции</li>
+          <li>• Хочешь не скетч, а почти слайд для доки или презентации</li>
+          <li>• Нужен один HTML без тяжёлых зависимостей</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-dot emerald"></div><h3>Когда ставить systematic-debugging</h3></div>
+        <ul>
+          <li>• Агент начинает гадать и предлагать фиксы на удачу</li>
+          <li>• Есть flaky test, regression или интеграционный баг</li>
+          <li>• Нужно заставить расследовать причину, а не метаться</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-dot amber"></div><h3>Когда ставить codebase-inspection</h3></div>
+        <ul>
+          <li>• Хочешь быстро понять размер репы и стек</li>
+          <li>• Нужно сравнить два репозитория по объёму</li>
+          <li>• Надо посчитать LOC без ручной ерунды</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">Generated in OpenClaw workspace as a demo for imported Hermes skills.</div>
+  </div>
+</body>
+</html>

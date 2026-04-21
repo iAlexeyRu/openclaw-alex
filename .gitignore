@@ -1,0 +1,8 @@
+.openclaw/*
+!.openclaw/workspace-state.json
+imports/
+__pycache__/
+*.pyc
+scripts/__pycache__/
+memory/.dreams/
+tools/lightpanda/lightpanda
